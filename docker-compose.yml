@@ -73,3 +73,11 @@ services:
     depends_on:
       fl-ebank-config-service:
         condition: service_healthy
+
+  fl-ms-angular-frontend:
+    build: ./angular-front-end
+    container_name: fl-ms-angular-frontend
+    ports:
+      - '80:80'
+    expose:
+      - '80'
